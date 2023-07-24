@@ -38,8 +38,8 @@ function Navbar() {
   const handleAddProduct=()=>{
     if(data.productImage && data.price && data.productName){
 
-      setNewData(JSON.parse(localStorage.getItem("keyValue")))
-      localStorage.setItem("keyValue",JSON.stringify([...newData,data]))
+      const productData=JSON.parse(localStorage.getItem("keyValue"))
+      localStorage.setItem("keyValue",JSON.stringify([...productData,data]))
       setData({
         productName:"",
         price:"",

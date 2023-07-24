@@ -16,9 +16,9 @@ function Cards() {
     <>
     
     <div style={{width:'80%',margin:'100px auto 0px',display:'flex',flexWrap:'wrap',justifyContent:'space-around'}}>
-        {card.map((item)=>{
+        {card.map((item,i)=>{
             return(
-                <div style={{border:'1px solid red',marginBottom:'40px',gap:'20px', display:'flex',flexDirection:'column',alignItems:'center' ,width:'30%',padding:'30px 20px'}}>
+                <div key={i} style={{border:'1px solid red',marginBottom:'40px',gap:'20px', display:'flex',flexDirection:'column',alignItems:'center' ,width:'30%',padding:'30px 20px'}}>
                     <img src={item.productImage} alt='ProductImage'/>
                     <h3>ProductName : {item.productName}</h3>
                     <h4>Price : {item.price}</h4>
